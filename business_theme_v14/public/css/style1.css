@@ -231,7 +231,7 @@ header .form-control:focus{
     background-color: var(--white-color) !important;
 }
 
-ulli.cnav-item{
+.cnav-item a{
 color:red !important;
 }
 

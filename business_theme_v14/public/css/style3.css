@@ -231,8 +231,8 @@ header .form-control:focus{
     background-color: var(--white-color) !important;
 }
 
-ulli.cnav-item{
-color:red !important;
+ul li.cnav-item a{
+color:white !important;
 }
 
 /* Sidebar */
