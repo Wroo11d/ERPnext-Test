@@ -3,34 +3,37 @@ frappe.provide('frappe.ui.toolbar');
 frappe.ui.toolbar.add_navbar_item = function () {
     const content = [
         {
-            name:"Home",
-            link:"/app/home"
+            name:"Customers",
+            link:"http://127.0.0.1:8000/app/customer",
+            icon:"#icon-customer"
         },
         {
-            name:"Home2",
-            link:"/app/home"
+            name:"Subscription",
+            link:"http://127.0.0.1:8000/app/subscription",
+            icon:"#icon-buying"
         },
         {
-            name:"Home3",
-            link:"/app/home"
+            name:"Sales Invoice",
+            link:"http://127.0.0.1:8000/app/sales-invoice",
+            icon:"#icon-sell"
         }
     ];
     
     // Target the sidebar section
 
     const sidebar = document.querySelector('[data-title="Public"]'); //${".classname}
-    if (!sidebar) {
+    /*if (!sidebar) {
         alert('sidebar not found'); // Alert if sidebar is not found
         return;
-    }
+    }*/
 
-    function createItem(name, link) {
+    function createItem(name, link, icon) {
         return (`
         <div class="sidebar-item-container is-draggable" item-parent="" item-name=${name} item-public="1" item-is-hidden="0">
                      <div class="desk-sidebar-item standard-sidebar-item">
                          <a href=${link} class="item-anchor" title=${name}>
                              <span class="sidebar-item-icon" item-icon="getting-started"><svg class="icon  icon-md" style="">
-                 <use class="" href="#icon-getting-started"></use>
+                 <use class="" href=${icon}></use>
              </svg></span>
                              <span class="sidebar-item-label">${name}<span>
                          </span></span></a>
@@ -72,7 +75,7 @@ frappe.ui.toolbar.add_navbar_item = function () {
 
     content.forEach(element => {
         // Create new sidebar item
-        const newItem = createItem(element.name, element.link);
+        const newItem = createItem(element.name, element.link, element.icon);
         // Add the new item at the end
         sidebar.insertAdjacentHTML('beforeend', newItem);
     });
