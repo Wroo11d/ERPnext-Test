@@ -53,18 +53,18 @@
 }
 
 [data-theme="light"] {
-    --bg-color: #f2f5fa;
+    --bg-color: #77878B;
     --text-bold: 600;
     --control-bg : #fff;
     --control-bg-on-gray: #d4dcea;
     --disabled-control-bg: #f2f5fa;
     --heading-color: #333;
-    --border-color:#e3e8f1;
+    --border-color:#96D700;/*#e3e8f1;*/
     --avatar-frame-bg: #dde2ea;
     --margin-lg: 15px;
     --sidebar-select-color: #d4dcea;
     --awesomplete-hover-bg: #d4dcea;
-    --scroll-bg: #eef1f5;
+    --scroll-bg: #77878B;
     --scroll-color: #d9dfe6;
 }
 
@@ -135,8 +135,8 @@ input:focus{
 
 /* Colours */
 :root {
-    --background-color: #36414c;
-    --primary-color: #ffa00a;
+    --background-color: #15324f;
+    --primary-color: #2490EF;
     --secondary-color: #7574ff;
     --white-color: #ffffff;
     --black-color: #000000;
@@ -154,7 +154,7 @@ input:focus{
 .btn-primary{
     color: #fff !important;
     background-color: var(--primary-color) !important;
-    border-radius: 0 !important;
+    /*border-radius: 0 !important;*/
 }
 .btn-primary:hover{
     background-color: rgba(255, 120, 10, 0.93) !important;
@@ -185,7 +185,7 @@ input:focus{
     height: var(--navbar-height);
 }
 .navbar-expand{
-    background-color: var(--background-color);
+    background-color: var(--background-color) !important;
 }
 #navbar-breadcrumbs > li > a::before{
     font-family: FontAwesome;

@@ -5,7 +5,6 @@ frappe.ui.toolbar.add_navbar_item = function() {
     console.log("--------------------------\n-------------------------");
     // Target the navbar section
     
-    //document.getElementById("navbar-breadcrumbs").append("<li>heyyyyyyyyyyyyyyyyyyyyyy</li>");
 
     const navbar = document.querySelector(".collapse.navbar-collapse.justify-content-end"); //${".classname}
     if (!navbar) {
@@ -17,10 +16,21 @@ frappe.ui.toolbar.add_navbar_item = function() {
     
     
     // Create new navbar items
-	const newItem = `
+   /* const newItem = `
+    <ul class="navbar-nav">
+        <li class="navbar-item">
+            <a href="http://10.4.4.16:8080/app" title="Back" 
+            <svg class="icon icon-md"><use href="#icon-left"></use></svg>  > 
+        </li>
+    </ul>
+    `;*/
+    const newItem = `
     <ul class="navbar-nav">
         <li class="cnav-item">
-            <a href="http://www.erpnext.com">New Item 1</a>
+            <a href="http://www.erpnext.com">New Item 1>
+            span class="sidebar-item-icon" item-icon="getting-started"><svg class="icon  icon-md" style="">
+                 <use class="" href="#icon-left"></use>
+             </svg></span>
         </li>
         <li class="cnav-item" >
             <a href="http://www.erpnext.com">New Item 2</a>
@@ -32,7 +42,7 @@ frappe.ui.toolbar.add_navbar_item = function() {
     `;
     
     // Add the new items right after the logo
-    navbar.insertAdjacentHTML('afterbegin', newItem);
+    navbar.insertAdjacentHTML('beforebegin', newItem);
     alert('Navbar items added'); // Alert after adding navbar items
     
 }
