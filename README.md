@@ -1,4 +1,4 @@
-## Business Theme V14
+## Custom Theme 
 
 Theme for ERPNext / Frappe
 
